@@ -17,7 +17,7 @@ The script employs a PUT request to modify a booking with the provided data. It 
 2. Adjust the script with the relevant Base URL, booking ID, data, and headers.
 3. Execute the script using the command:
     ```
-    python test-scenarios.py
+    python testscenarios.py
     ```
 
 ### Script Explanation
