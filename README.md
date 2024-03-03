@@ -13,7 +13,7 @@ The script employs a PUT request to modify a booking with the provided data. It 
 
 ### Usage
 
-1. Copy the script into a Python file (e.g., `test-scenarios.py`).
+1. Copy the script into a Python file (e.g., `testscenarios.py`).
 2. Adjust the script with the relevant Base URL, booking ID, data, and headers.
 3. Execute the script using the command:
     ```
@@ -23,7 +23,7 @@ The script employs a PUT request to modify a booking with the provided data. It 
 ### Script Explanation
 
 - **Base URL**: The base URL of the booking system API.
-- **Function `update_booking()`**: Dispatches a PUT request to update a booking.
+- **Function `updatebooking()`**: Dispatches a PUT request to update a booking.
 - **Positive Test Scenario**: Updates a booking with valid data and authentication.
 - **Negative Test Scenario**: Endeavors to update a booking with an invalid booking ID.
 - **Additional Scenarios**: Test scenarios for absent fields and inappropriate data types.

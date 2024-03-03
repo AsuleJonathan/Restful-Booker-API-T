@@ -4,7 +4,7 @@ import requests
 BASE_URL = 'https://restful-booker.herokuapp.com/booking/'
 
 # Function to send a PUT request to update a booking
-def update_booking(booking_id, data):
+def updatebooking(booking_id, data):
     url = BASE_URL + str(booking_id)
     headers = {
     'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ def test_positive_scenario():
     'Accept': 'application/json',
     'Authorization': 'Basic YWRtaW46cGFzc3dvcmQxMjM='
 }
-    response = update_booking(booking_id, data)
+    response = updatebooking(booking_id, data)
     print("Positive Test Scenario Response:")
     print("Status Code:", response.status_code)
     print("Response Body:", response.json())
@@ -58,7 +58,7 @@ def test_invalid_booking_id_scenario():
         'Accept': 'application/json',
         'Authorization': 'Basic YWRtaW46cGFzc3dvcmQxMjM='
     }
-    response = update_booking(invalid_booking_id, data)
+    response = updatebooking(invalid_booking_id, data)
     print("Negative Test Scenario: Invalid Booking ID Response:")
     print("Status Code:", response.status_code)
     print("Response Body:", response.text)
@@ -71,7 +71,7 @@ def test_missing_fields_scenario():
         # Missing required fields
     }
 
-    response = update_booking(booking_id, data)
+    response = updatebooking(booking_id, data)
     print("Negative Test Scenario: Missing Fields Response:")
     print("Status Code:", response.status_code)
     print("Response Body:", response.text)
@@ -92,7 +92,7 @@ def test_invalid_data_types_scenario():
         "additionalneeds": ["Dinner"]  # Invalid data type
     }
    
-    response = update_booking(booking_id, data)
+    response = updatebooking(booking_id, data)
     print("Negative Test Scenario: Invalid Data Types Response:")
     print("Status Code:", response.status_code)
     print("Response Body:", response.text)
